@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+<body>
+    <div class="main">
+        <form action="" method="post">
+            <h1>Tell Me About Yourself</h1>
+            <div class="name">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+            </div>
+    
+            <div class="identity">
+                
+                <div class="eyecolor">
+                    <h3>Eye Color:</h3>
+                    <div class="color">
+                        <input type="radio" id="brown" name="eye-color" value="Brown">
+                        <label for="brown">Brown</label>
+                    </div>
+                    <div class="color">
+                        <input type="radio" id="blue" name="eye-color" value="Blue">
+                        <label for="blue">Blue</label>
+                    </div>
+                    <div class="color">
+                        <input type="radio" id="green" name="eye-color" value="Green">
+                        <label for="green">Green</label>
+                    </div>
+                    <div class="color">
+                        <input type="radio" id="other" name="eye-color" value="Other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+    
+                <div class="pets">
+    
+                    <h3>My Pets:</h3>
+                    <div class="pet">
+                        <input type="checkbox">
+                        <span>Dog</span>
+                    </div>
+    
+                    <div class="pet">
+                        <input type="checkbox">
+                        <span>Cat</span>
+                    </div>
+    
+                    <div class="pet">
+                        <input type="checkbox">
+                        <span>Dinosour</span>
+                    </div>
+    
+                    <div class="pet">
+                        <input type="checkbox">
+                        <span>Gorilia</span>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="language">
+                <h3>Foreign language spoken:</h3>
+                <select name="" id="">
+                    <option value="">Select Language</option>
+                    <option value="">Chinese</option>
+                    <option value="">Japanese</option>
+                    <option value="">Korean</option>
+                    <option value="">Mandarin</option>
+                </select>
+            </div>
+    
+            <div class="message">
+                <h3>Tell me more about yourself</h3>
+                <textarea name="" id="" placeholder="Type here"></textarea>
+            </div>
+            
+            <div class="btn">
+                <a href="index.html" class="button">All Done</a>
+            </div>
+    
+        </form>
+    </div>
+    
+</body>
+</html>

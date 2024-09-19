@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lei</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="landing-page">
+        <div class="landing-content">
+            <div class="text-content">
+                <div class="intro">
+                    <h1>Lei Angel Concepcion A.</h1>
+                    <p>Explore Until We Reach our Limit.</p>
+                </div>
+                <div class="social-media">
+                  <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                      <i class="fab fa-facebook"></i>
+                  </a>
+                  <a href="https://linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                </div>
+            </div>
+            <div class="profile-picture">
+                <img src="profile.jpg" alt="Profile Picture">
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav id="navbar">
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <ul class="nav-list">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- About Me -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I am Lei, a BSIS student with a passion for writing peom and story. I have extensive experience in making story.</p>
+            <h3>Skills</h3>
+            <ul>
+                <li>Writing Stories</li>
+                <li>Programming</li>
+                <li>Cooking and Eating</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project">
+                    <div class="project-image">
+                        <img src="paper-boat.png" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Prototype</h3>
+                        <p>Designing a prototype on selected system.</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-image">
+                        <img src="paper-plane.png" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Portfolio</h3>
+                        <p>Creating Own Portfolio</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies & Activities</h2>
+            <p>In my free time, I enjoy the following activities:</p>
+            <ul>
+                <li>Gaming</li>
+                <li>studying</li>
+                <li>learning and Exploring</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+          <h2>Contact</h2>
+          <form action="#" method="post">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+      
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+      
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" required></textarea>
+      
+              <button type="submit">Send</button>
+          </form>
+          <!-- Open form -->
+          <a href="form.html" class="redirect-button">or tell me about yourself</a>
+      </section>      
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WEB 4 Activity.</p>
+    </footer>
+
+    <script>
+      let lastScrollTop = 0;
+      const header = document.getElementById('landing-page');
+      const navbar = document.getElementById('navbar');
+      const stickyHeight = header.offsetHeight;
+  
+      window.addEventListener('scroll', () => {
+          let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+          if (currentScroll > stickyHeight) {
+              navbar.classList.add('sticky');
+  
+              if (currentScroll > lastScrollTop) {
+                  navbar.classList.remove('visible');
+              } else {
+                  navbar.classList.add('visible');
+              }
+          } else {
+              navbar.classList.remove('sticky');
+              navbar.classList.remove('visible');
+          }
+  
+          lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+      });
+
+
+      document.addEventListener('DOMContentLoaded', () => {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navList = document.querySelector('.nav-list');
+            const navLinks = document.querySelectorAll('.nav-list a');
+
+            menuToggle.addEventListener('click', () => {
+                navList.classList.toggle('active');
+            });
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navList.classList.remove('active');
+                });
+            });
+        });
+  </script>
+  
+</body>
+</html>
